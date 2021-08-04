@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJET JS</title>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body class="bg-light" onload="loadproduit()">
+
+
+
+    <!-- As a heading -->
+    <nav class="navbar navbar-primary bg-primary">
+        <div class="container-fluid ">
+            <span class="navbar-brand mb-0 h1">
+                <font face="algerian" style="font-weight:bolder;color: white;"> GL-Commercial </font>
+            </span>
+            <h1  class="col-md-8"> <font face="times new romain"  style="font-weight:bolder;color: white;"> VENTE EN LIGNE </font> </h1>
+
+        </div>
+    </nav>
+
+    <div  style="width:45%;margin-top: 20px; margin-left: 10px;" >
+
+        
+        <div class="container mb-3" id="produit">
+            
+              <h5 class="card-header text-center" >BIENVENUE DANS NOTRE SITE DE VENTE</h5>
+        </div>
+    </div>   
+
+<div style="width: 80%; height:100%;margin-left: 10%;margin-top: -53%; ">
+    <div class="container classe mt-5" id="mt">
+
+        <div class="card col-md-8  offset-6">
+            <div class="mb-4">
+            <h5 class="card-header">INFORMATION DU CLIENT</h5>
+            <div class="card-body">
+                <form method="POST" action="">
+                    <div class="mb-4">
+                        <label for="nom" class="form-label">Nom Complet</label>
+                        <input type="text" class="form-control" id="nom" placeholder="Nom Complet">
+                    </div>
+                    <span class="offset-4 text-danger  text-center erreur"  hidden>Ce champ est obligatoire</span>
+                    <div class="mb-4">
+                        <label class="form-label">Adresse</label>
+                        <input type="text" class="form-control" placeholder="Adresse" id="Adresse">
+                    </div>
+                    <span   class="offset-4 text-danger  text-center erreur"  hidden>Ce champ est obligatoire</span>
+                    <div class="mb-4">
+                        <label class="form-label">Telephone</label>
+                        <input type="number" class="form-control" placeholder="Telephone" id="telephone">
+                    </div>
+                    <span   class="offset-4 text-danger  text-center erreur"  hidden>Ce champ est obligatoire</span>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ <div class="mt-4" hidden id="list" style="padding-top: 370px;"> 
+
+        <h2 class="text-center text-primary mb-9 ">liste des produits commandés</h2>
+  
+  <a href="#commande">  <button type="submit" name="Enregistrer" class="btn btn-success offset-11 mb-3" OnClick="btnvalide()" id="valide">VALIDER</button> </a>
+      
+    <div id="table">
+
+        <table class="table table-bordered">
+            <tr class="bg-secondary text-white">
+                <th>DESIGNATION</th>
+                <th width="25%">PRIX</th>
+                <th width="25%">Quantite</th>
+                <th width="25%">MONTANT</th>
+            </tr>
+
+            <tbody id="tab">
+                
+            </tbody>
+            <tr >
+                <td class="text-center" colspan="3">TOTALE</td>
+                <td id="total"></td>
+             
+            </tr>
+            
+        </table>
+
+    </div>
+
+    </div>
+
+    <div class="container mt-5 col-md-11" id="commande" hidden ">
+
+        <div class="card   col-md-6" id="pdf">
+            <div class="mb-4">
+            <h5 class="card-header">GL-Commercial</h5>
+            <div class="card-body">
+                <form  action="">
+                    <div class="mb-4">
+                        <label for="" class="form-label offset-6">BON DE COMMANDE</label><br>
+                        <label for="" class="form-label">CLIENT</label>
+                        <hr>
+                        <div id="info">
+                        
+                       
+                        </div >
+                        <div id="recupere">
+
+                        </div>
+                     <button type="submit" name="Enregistrer" class="btn btn-success offset-6 mb-6" OnClick="btnvalid() " id="btn">FACTURE</button> 
+                       </div>
+                       </form>
+            </div>
+        </div>
+        </div>
+    </div>
+        
+
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>
